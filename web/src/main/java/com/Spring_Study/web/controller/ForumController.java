@@ -8,13 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author WL
- * @className ForumController
- * @Description TODO
- * @Date 2020/3/20 14:38
- * @Version 1.0
- **/
 
 @RestController
 @RequestMapping(value = "forum")
@@ -28,5 +21,4 @@ public class ForumController {
         ResponseObject ro = new ResponseObject(1,"成功",forumService.selectAll());
         return JSON.toJSONString(ro);
     }
-
 }

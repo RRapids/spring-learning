@@ -13,18 +13,11 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * @author wl
- * @className PostDaoImpl
- * @Description TODO
- * @Date 2020/3/17 19:10
- * @Version 1.0
- **/
+
 @Repository
 public class PostDaoImpl implements PostDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-
 
     @Override
     public int insert(Post post) {

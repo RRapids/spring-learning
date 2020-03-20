@@ -5,13 +5,7 @@ import com.Spring_Study.web.entity.Post;
 
 import java.util.List;
 
-/**
- * @author wl
- * @className PostDao
- * @Description TODO
- * @Date 2020/3/17 19:08
- * @Version 1.0
- **/
+
 public interface PostDao {
     /**
      * 插入数据

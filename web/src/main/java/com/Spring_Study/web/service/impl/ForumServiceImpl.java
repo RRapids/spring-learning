@@ -10,13 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * @author wl
- * @className ForumServiceImpl
- * @Description TODO
- * @Date 2020/3/20 13:58
- * @Version 1.0
- **/
 @Service
 public class ForumServiceImpl implements ForumService {
 
@@ -25,5 +18,10 @@ public class ForumServiceImpl implements ForumService {
     @Override
     public List<Forum> selectAll() {
         return forumDao.selectAll();
+    }
+
+    @Override
+    public Forum get(int forumId) {
+        return forumDao.get(10);
     }
 }

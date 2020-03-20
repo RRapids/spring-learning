@@ -22,4 +22,10 @@ public class ForumDaoTest {
         List<Forum> forumList = forumDao.selectAll();
         forumList.forEach(System.out::println);
     }
+
+    @Test
+    public void get(){
+       Forum forum =  forumDao.get(8);
+        System.out.println(forum);
+    }
 }

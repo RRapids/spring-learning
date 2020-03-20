@@ -7,10 +7,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author su
+ * @author ytf
  * @className Post
  * @Description TODO
- * @Date 2020/3/17 19:06
+ * @Date 2020/3/17
  * @Version 1.0
  **/
 @Data

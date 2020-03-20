@@ -11,17 +11,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * @author wl
- * @className ForumDaoImpl
- * @Description TODO
- * @Date 2020/3/17 15:21
- * @Version 1.0
- **/
+
 @Repository
 public class ForumDaoImpl implements ForumDao {
 
-//    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     public ForumDaoImpl(JdbcTemplate jdbcTemplate) {
@@ -46,7 +39,7 @@ public class ForumDaoImpl implements ForumDao {
         return jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {
             @Override
             public void setValues(PreparedStatement preparedStatement, int i) throws SQLException {
-                preparedStatement.setString(1,forumList.get(i).getForumName());
+                preparedStatement.setString(1, forumList.get(i).getForumName());
             }
 
             @Override
@@ -67,7 +60,7 @@ public class ForumDaoImpl implements ForumDao {
     public int update(Forum forum) {
         String sql = "UPDATE t_forum SET forum_name = ? WHERE forum_id = ?";
         Object[] args = {forum.getForumName(), forum.getForumId()};
-        return jdbcTemplate.update(sql,args);
+        return jdbcTemplate.update(sql, args);
     }
 
     @Override

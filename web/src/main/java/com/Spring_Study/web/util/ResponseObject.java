@@ -5,8 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author wl
- * @ClassNameResponseObject
+ * @author ytf
  * @Description TODO
  * @Date 2020/3/20
  * @Version 1.0

@@ -15,4 +15,6 @@ import java.util.List;
 public interface ForumService {
 
     List<Forum> selectAll();
+
+    Forum get(int forumId);
 }
