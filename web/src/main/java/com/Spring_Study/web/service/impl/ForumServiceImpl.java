@@ -22,6 +22,6 @@ public class ForumServiceImpl implements ForumService {
 
     @Override
     public Forum get(int forumId) {
-        return forumDao.get(10);
+        return forumDao.get(8);
     }
 }

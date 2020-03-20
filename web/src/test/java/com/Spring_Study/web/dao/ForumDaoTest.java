@@ -1,4 +1,4 @@
-
+package com.Spring_Study.web.dao;
 
 import com.Spring_Study.web.dao.ForumDao;
 import com.Spring_Study.web.entity.Forum;
