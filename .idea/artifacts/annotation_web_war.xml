@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="annotation-web:war">
+    <output-path>$PROJECT_DIR$/annotation-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>annotation-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="annotation-web.war">
+      <element id="artifact" artifact-name="annotation-web:war exploded" />
+    </root>
+  </artifact>
+</component>

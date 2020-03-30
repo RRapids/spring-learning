@@ -22,7 +22,7 @@ public class ForumController {
 
     @RequestMapping(value = "/id", produces = "application/json; charset=utf-8")
     public String getId() {
-        ResponseObject ro = new ResponseObject(2, "成功", forumService.get(9));
+        ResponseObject ro = new ResponseObject(2, "成功", forumService.get(8));
         return JSON.toJSONString(ro);
     }
 }

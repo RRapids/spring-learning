@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="referrer" content="no-referrer" />
+    <title>话题</title>
+    <style>
+        .topic-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: row;
+            max-width: 80%;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .topic-item {
+            display: flex;
+            flex-grow: 0;
+            padding: 1.5rem 1.2rem;
+            align-items: flex-start;
+        }
+
+        .icon {
+            position: relative;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 1rem;
+            margin-right: 2%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .content {
+            color: #8a9aa9;
+            width: 12rem;
+            max-width: 12rem;
+            letter-spacing: normal;
+            text-align: left;
+            margin-left: 1.2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        span {
+            padding-top: .5rem;
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+<div class="topic-list">
+    <h2>全部话题</h2>
+    <div class="list">
+        <div class="topic-item" th:each="topic:${topics}">
+            <div class="icon">
+                <img th:src="${topic.topicIcon}" th:title="${topic.description}" width="100%" height="100%" style="border-radius: 10px"/>
+            </div>
+            <div class="content">
+                <a th:text="${topic.topicName}" href="#"></a>
+                <span th:text="${topic.followersCount}+'关注·'+${topic.msgCount}+'沸点'"></span>
+                <span th:unless="${topic.followed}" style="cursor: pointer;color: #37c701">+关注</span>
+                <span th:if="${topic.followed}">已关注</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="referrer" content="never">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <title>主页</title>
+    <style>
+        .photo-container {
+            display: grid;
+            width: 80%;
+            margin: 0 auto;
+            grid-template-columns: auto auto auto auto;
+        }
+        .top_search{
+            color: #ffffff;
+            width: 100%;
+            margin: 0 auto;
+            height: 300px;
+            background-image: url("https://rapids.oss-cn-beijing.aliyuncs.com/img/love-4816282_1920.jpg ");
+        }
+        a{
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="top_search">
+    <h2 th:text="${message}"></h2>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">发掘</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Videos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">排行榜</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Challenges</a>
+        </li>
+    </ul>
+
+    <div style="width: 60%;margin: 0 auto">
+        <h2>才華洋溢創作者分享的最佳免費圖庫相片和影片。</h2>
+        <br/>
+        <div class="input-group mb-3">
+            <div class="input-group">
+                <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-secondary">Search</button>
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">风景</a>
+                        <a class="dropdown-item" href="#">人物</a>
+                        <a class="dropdown-item" href="#">头像</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="photo-container">
+    <div th:each="wallpaper:${wallpaperList}" class="card" style="width: 18rem;margin: 6px">
+        <img th:src="${wallpaper.img}" class="card-img-top" style="height: 200px;"/>
+        <div class="card-body">
+            <h5 th:text="${wallpaper.title}" class="card-title"></h5>
+            <p th:text="${wallpaper.description}" class="card-text"></p>
+        </div>
+    </div>
+
+    <div th:each="mountain:${mountainList}" class="card" style="width: 18rem;margin: 6px">
+        <img th:src="${mountain.img}" class="card-img-top" style="height: 200px;"/>
+        <div class="card-body">
+            <h5 th:text="${mountain.title}" class="card-title"></h5>
+            <p th:text="${mountain.description}" class="card-text"></p>
+        </div>
+    </div>
+
+    <div th:each="people:${peopleList}" class="card" style="width: 18rem;margin: 6px">
+        <img th:src="${people.img}" class="card-img-top" style="height: 200px;"/>
+        <div class="card-body">
+            <h5 th:text="${people.title}" class="card-title"></h5>
+            <p th:text="${people.description}" class="card-text"></p>
+        </div>
+    </div>
+
+    <div th:each="headImage:${headImageList}" class="card" style="width: 18rem;margin: 6px">
+        <img th:src="${headImage.img}" class="card-img-top" style="height: 200px;"/>
+        <div class="card-body">
+            <h5 th:text="${headImage.title}" class="card-title"></h5>
+            <p th:text="${headImage.description}" class="card-text"></p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

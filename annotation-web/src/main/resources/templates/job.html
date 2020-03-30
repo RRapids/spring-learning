@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="referrer" content="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <title>工作</title>
+</head>
+<body>
+<div class="container">
+    <div class="row" th:each="job:${jobs}">
+        <div class="col">
+            <img th:src="${job.jobLogo}" width="60px" height="45px"/>
+        </div>
+        <div class="col" th:text="${job.jobName}"></div>
+        <div class="col" th:text="${job.jobEnter}"></div>
+        <div class="col" th:text="${job.jobSalary}"></div>
+        <div class="col" th:text="${job.upTime}"></div>
+    </div>
+</div>
+</body>
+</html>
