@@ -30,10 +30,11 @@
     <!--        SELECT forum_id forumId,forum_name forumName-->
     <!--        FROM t_forum-->
     <!--    </select>-->
-
+    
     <select id="selectForumById" parameterType="int" resultType="com.soft1851.spring.mybatis.entity.Forum">
         SELECT *
         FROM t_forum
         WHERE forum_id = #{id}
     </select>
+
 </mapper>

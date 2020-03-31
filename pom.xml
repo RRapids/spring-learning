@@ -51,7 +51,6 @@
             <version>${spring.version}</version>
         </dependency>
 
-
         <!-- Spring上下文模块,级联引入了aop、beans、core、expression-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -150,6 +149,12 @@
             <version>${fastjson.version}</version>
         </dependency>
 
+<!--     annotation依赖,用于使用@Resource注解-->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.3.2</version>
+        </dependency>
         <!--MyBatis依赖-->
         <dependency>
             <groupId>org.mybatis</groupId>
