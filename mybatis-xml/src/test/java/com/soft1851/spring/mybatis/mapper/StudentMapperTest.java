@@ -84,7 +84,7 @@ public class StudentMapperTest {
         MatterDto matterDto = MatterDto.builder()
                 .teacherName("许老师")
                 .clazzName("软件1851")
-                .studentName("王峰")
+                .studentName("李")
                 .build();
         studentMapper.selectLimitFromTeacherInClassByDynamicSql(matterDto).forEach(System.out::println);
     }
